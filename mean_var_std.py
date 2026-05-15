@@ -1,42 +1,42 @@
 import numpy as np
 
-def calculate(list):
-    if len(list) != 9:
-        raise ValueError("List must contain nine numbers.")
+def calcular(lista):
+    if len(lista) != 9:
+        raise ValueError("La lista debe contener nueve números.")
     
-    matrix = np.array(list).reshape(3, 3)
+    matriz = np.array(lista).reshape(3, 3)
     
-    calculations = {
-        'mean': [
-            matrix.mean(axis=0).tolist(), 
-            matrix.mean(axis=1).tolist(), 
-            matrix.flatten().mean().tolist()
+    calculos = {
+        'media': [
+            matriz.mean(axis=0).tolist(), 
+            matriz.mean(axis=1).tolist(), 
+            matriz.flatten().mean().tolist()
         ],
-        'variance': [
-            matrix.var(axis=0).tolist(), 
-            matrix.var(axis=1).tolist(), 
-            matrix.flatten().var().tolist()
+        'varianza': [
+            matriz.var(axis=0).tolist(), 
+            matriz.var(axis=1).tolist(), 
+            matriz.flatten().var().tolist()
         ],
-        'standard deviation': [
-            matrix.std(axis=0).tolist(), 
-            matrix.std(axis=1).tolist(), 
-            matrix.flatten().std().tolist()
+        'desviacion estandar': [
+            matriz.std(axis=0).tolist(), 
+            matriz.std(axis=1).tolist(), 
+            matriz.flatten().std().tolist()
         ],
-        'max': [
-            matrix.max(axis=0).tolist(), 
-            matrix.max(axis=1).tolist(), 
-            matrix.flatten().max().tolist()
+        'maximo': [
+            matriz.max(axis=0).tolist(), 
+            matriz.max(axis=1).tolist(), 
+            matriz.flatten().max().tolist()
         ],
-        'min': [
-            matrix.min(axis=0).tolist(), 
-            matrix.min(axis=1).tolist(), 
-            matrix.flatten().min().tolist()
+        'minimo': [
+            matriz.min(axis=0).tolist(), 
+            matriz.min(axis=1).tolist(), 
+            matriz.flatten().min().tolist()
         ],
-        'sum': [
-            matrix.sum(axis=0).tolist(), 
-            matrix.sum(axis=1).tolist(), 
-            matrix.flatten().sum().tolist()
+        'suma': [
+            matriz.sum(axis=0).tolist(), 
+            matriz.sum(axis=1).tolist(), 
+            matriz.flatten().sum().tolist()
         ]
     }
     
-    return calculations
+    return calculos
